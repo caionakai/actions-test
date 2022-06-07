@@ -28,13 +28,14 @@ jobs:
       - name: Set env var in this step
         run: |
           $myvar = "anything here D:/"
-          echo "MY_ENV_VAR=${{myvar}}" >> $GITHUB_ENV
-          echo "${{myvar}}"
+          echo "MY_ENV_VAR=$myvar" >> $GITHUB_ENV
+          echo $myvar
         shell: pwsh
 
       # Runs a single command using the runners shell
       - name: Echo my env var
         run: | 
           echo "${{ env.MY_ENV_VAR }}"
+          echo $MY_ENV_VAR
         env:
           MY_ENV_VAR: ${{ env.MY_ENV_VAR }}
