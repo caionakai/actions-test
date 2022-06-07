@@ -28,7 +28,7 @@ jobs:
       - name: Set env var in this step
         run: |
           $myvar = "anything here D:/"
-          echo "MY_ENV_VAR=$myvar" >> $GITHUB_ENV
+          echo "MY_ENV_VAR=test123" >> $GITHUB_ENV
           echo $myvar
         shell: pwsh
 
