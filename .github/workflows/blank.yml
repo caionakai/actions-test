@@ -29,7 +29,7 @@ jobs:
         run: |
           $myvar = "anything here D:/"
           echo "MY_ENV_VAR=$myvar" >> $GITHUB_ENV
-          echo "MY_ENV_VAR=$myvar"
+          echo "$myvar"
         shell: pwsh
 
       # Runs a single command using the runners shell
