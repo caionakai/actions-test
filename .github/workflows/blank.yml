@@ -42,7 +42,8 @@ jobs:
         run: |
           pwd
           mkdir /dist
-          touch /dist/test.dmg
+          cd /dist
+          touch test.dmg
       
       - uses: actions/upload-artifact@v3
         with:
